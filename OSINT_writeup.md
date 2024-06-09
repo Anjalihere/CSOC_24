@@ -9,11 +9,12 @@ Just type in "Let's Go!"
 
 Reading the instructions, it said to analyse the image well and that image contain a lot of information. So, I converted the ` binary ` of image into ` ASCII ` and got this ` A picture is worth 1000 words but metadata is worth far more `.
 
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/080b8b33-3bba-4f9c-ae43-69b713c89644)
+<img width="1276" alt="Screenshot 2024-06-06 at 8 08 06 PM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/d2040d28-b90c-48e4-8c78-a705cedc1cda">
 
 OK! so let's look at ` metadata ` i.e., ` EXIFTOOL ` and woohoo..found the ` username ` of attacker in ` Export-filename ` section.
 
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/279fed76-a7d9-48f1-85b6-c980f51ef8bb)
+<img width="622" alt="Screenshot 2024-06-09 at 9 27 21 PM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/ac287e06-8b1e-4afb-9bbc-4877b35a7482">
+
 
 ### RECONNAISSANCE
 > What is the full email address used by the attacker?
@@ -25,7 +26,7 @@ account. Going through the github repo of attacker, I found the repo ` PGP ` whi
 
 ![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/13a593ad-0087-4fe2-af86-f349cf5c0a8a)
 
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/968c5bbc-5374-4492-b0b8-5ed42d4b1328)
+<img width="1027" alt="Screenshot 2024-06-07 at 1 51 41 AM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/2bbb6e82-279b-4978-9071-c20274b664cd">
 
 > What is the attacker's full real name?
 >
@@ -33,7 +34,8 @@ account. Going through the github repo of attacker, I found the repo ` PGP ` whi
 
 The Twitter account revealed the full real name of user ` Aiko Abe `:)
 
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/115b7a2e-953a-4b93-8b22-b841c9cecf09)
+<img width="781" alt="Screenshot 2024-06-07 at 12 55 59 AM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/ecb32561-7c41-4700-921d-5fc11d7d4d64">
+
 
 ### UNVEIL
 > What cryptocurrency does the attacker own a cryptocurrency wallet for?
@@ -42,11 +44,12 @@ The Twitter account revealed the full real name of user ` Aiko Abe `:)
 
 The instructions said to take a deeper dive into attacker's Github account and look for changes. Looking through attacker's own repositories...
 
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/b7f4a360-a2aa-498e-98fc-5216b92890b9)
+<img width="1267" alt="Screenshot 2024-06-06 at 9 28 35 PM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/bd1958a1-3b82-4d02-a92a-51ceb56a4bcf">
 
 I found this cryptocurrency wallet in ` ETH ` repo and searching on google, I found ` eth ` is the name of ` Ethereum ` cryptocurrency and for which attacker own a wallet.
 
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/241bd457-f666-44d0-9dae-9d20c3bad43a)
+<img width="1270" alt="Screenshot 2024-06-06 at 9 36 46 PM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/12940729-ad4c-443d-9a4d-4307c5ef6587">
+
 
 > What is the attacker's cryptocurrency wallet address?
 >
@@ -55,16 +58,17 @@ I found this cryptocurrency wallet in ` ETH ` repo and searching on google, I fo
 Going through the ` commit history ` of ` mining script `, I found a string of letters and numbers being deleted and on searching on google, I found that ` A wallet address is a string of letters and numbers from which cryptocurrencies or NFTs can be sent to and from. `
 There we got the wallet address!
 
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/df62db69-7387-422a-8f17-28d69c803de9)
+<img width="1257" alt="Screenshot 2024-06-06 at 9 35 18 PM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/ae4d6946-7dc8-4795-86bf-d7d5d0cc7021">
+
 
 > What mining pool did the attacker receive payments from on January 23, 2021 UTC?
 >
 > Ethermine
 
-This was somehing which can't be found on. For this, I searched for some website where I can see payment history of ` Ethereum `cryptocurrency and found this [etherscan.io](https://etherscan.io/) and when I put attacker's wallet address in search section, I got all 
-payments history and there I found that the attacker received payments from on Jan 23, 2021 was ` Ethermine `
+This was somehing which can't be found on. For this, I searched for some website where I can see payment history of ` Ethereum `cryptocurrency and found this [etherscan.io](https://etherscan.io/) and when I put attacker's wallet address in search section, I got all payments history and there I found that the attacker received payments from on ` Jan 23, 2021 ` was ` Ethermine `
 
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/16ae593b-7551-4673-ab77-109cb862acde)
+<img width="1266" alt="Screenshot 2024-06-06 at 9 46 43 PM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/6fdf842f-967f-470a-8601-e09010ad9a5d">
+
 
 > What other cryptocurrency did the attacker exchange with using their cryptocurrency wallet?
 >
@@ -81,8 +85,7 @@ The instructions said that the attacker messaged from another Twitter account.
 
 ![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/eba9ec0a-c0c0-4e5b-8178-b4e6401690a1)
 
-After seeing this image, I searched ` @AikoAbe3 ` on Twitter and oh! I got the account from which I got the full name of attacker and I also got to know that this was the new account of the 
-attacker and he had another before. Got the username ` SakuraLoverAiko ` :)
+After seeing this image, I searched ` @AikoAbe3 ` on Twitter and oh! I got the account from which I got the full name of attacker and I also got to know that this was the new account of the attacker and he had another before. Got the username ` SakuraLoverAiko ` :)
 
 ![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/10694d8e-f828-45e7-9703-87d439bab02f)
 
@@ -93,7 +96,8 @@ attacker and he had another before. Got the username ` SakuraLoverAiko ` :)
 Well, the hint said about ` The Dark Web ` and one of the attacker post said ` DEEP PASTE ` in capitals but I was not able to find any website with this name or anything. So, I just used the 
 screenshot given in hints for this task and there I got the url in search bar. 
 
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/7be818e1-5f49-46e0-9238-8fbe4a8e3e6a)
+<img width="1066" alt="Screenshot 2024-06-07 at 1 30 45 AM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/2f62e4a2-fe8a-4330-a547-3b83d9e468ef">
+
 
 
 > What is the BSSID for the attacker's Home WiFi?
@@ -110,7 +114,7 @@ indicated that location). And BOOM! it showed the BSSID as ` 84:AF:EC:34:FC:F8 `
 
 Attacker shared this image with a building on the side and a cherry blossom tree on another. Well, reverse searching this as a image doesn't give anything useful. 
 
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/9c801753-7024-48c8-b595-915a64b7bff2)
+![Esh-uTvUcAc-sXC](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/c4a9359f-6756-442c-91a9-4ce76f96a6d2)
 
 Finally, I noticed a white building in the back standing tall which was looking short, I reverse searched it and found it was not any building but ` Washington Monument `
 
@@ -131,8 +135,6 @@ Reverse searching the image on google, I found it was ` Sakura Lounge, Japan Air
 >
 > Lake Inawashiro
 
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/f41b8796-5742-429d-8477-1498f628cf41)
-
 Going through this map on ` Google Map ` I found this ` blue area ` which was actually a lake called ` Lake Inawashiro `.
 
 ![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/3cf63ec4-14e4-480a-98b0-a96de0ad8747)
@@ -151,9 +153,10 @@ I got this one's answer from the screenshot which was given in hint part of ` TA
 > 
 > Verify that the photo is not of the event described by the journalist.
 >
-> Reverse searching the image I found one of this article which was a book review with this image ` dated Sept. 4, 2020 ` (before this tweet) describing this incident which happened in ` Iraq ` and not in ` Pakistan `. The culprit being ` Al-Qaeda `.
->
-> ![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/fa96ae9a-40f7-4499-b6ca-4f8b421ce6e5)
+Reverse searching the image I found one of this article which was a book review with this image ` dated Sept. 4, 2020 ` (before this tweet) describing this incident which happened in ` Iraq ` and not in ` Pakistan `. The culprit being ` Al-Qaeda `.
+
+<img width="970" alt="Screenshot 2024-06-06 at 7 31 00 PM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/99dee494-cd9c-40d7-930f-25b3c62aa3e3">
+
 
 ### OSINT Exercise 4
 > This is a photo of a resort located on an island.
@@ -168,10 +171,9 @@ I got this one's answer from the screenshot which was given in hint part of ` TA
 
 Reverse searching the image on google, I got the name of the resort ` Oan Resort ` which was located on ` Oan Island, Wonip, Chuuk, Micronesia `. Then, I searched for ` Oan Resort Coordinates ` on island and it was ` 7.3626° N, 151.7563° E `
 
-For the third part, we need some ` Google Earth ` in the game. Putting the coordinates on there and moving and moving till we get to the direction from which the camera took the photo and here we got ` Northwest `.
+For the third part, we need some ` Google Earth ` in the game. Putting the coordinates on there and moving and moving till we get to the location from which the camera took the photo and here we got ` Northwest `.
 
 ![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/bf2ae893-905d-4eff-8843-c3e74ea70fba)
-
 
 
 ### OSINT Exercise 3
@@ -191,11 +193,13 @@ Reverse searching the image, I came across this official tweet by ` Villa Somali
 > 
 > b) What are the coordinates of where the camera was likely located in order to record this scene?
 
-Reverse searching the image, I found many posts with the same clip. Fortunately, one of the links titled ` Cutremur Chisinau 24.09.2016" `. Clicking on the link, I found that it is indeed the same clip.To get more confirmed, I searched for 
-` List of earthquakes in 2016 ` and there I found earthquakes that happened on ` 24th September ` and I tried to match the time zone as given in video and found the location was ` Romania `
-Then, for the coordinates of camera, I tried to match with directions of building around the house on which camera was placed.
+Reverse searching the image, I found many posts with the same clip. Fortunately, one of the links titled ` Cutremur Chisinau 24.09.2016 `. Clicking on the link, I found that it is indeed the same clip. To get more confirmed, I searched for all earthquakes that happened in ` September 2016 `and found [List of earthquakes in 2016](https://en.wikipedia.org/wiki/List_of_earthquakes_in_2016#September) and there I found earthquakes that happened on ` 24th September ` and I tried to match the time zone as given in video and found the location was ` Romania ` and the magnitude of earthquake was ` 5.6 ` from ` Wikipedia ` page. 
 
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/0391018d-8ea8-486d-a31d-e24d0004836c)
+<img width="828" alt="Screenshot 2024-06-10 at 12 26 10 AM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/a63fd51d-cfc9-4388-9e53-4c5722d8ecf5">
 
+Then, for the coordinates of camera, I tried to match the buildings around the house with the building on which camera was placed and yahoo..got the coordinates of camera ` 47.017518, 28.852841 `.
 
+<img width="568" alt="Screenshot 2024-06-10 at 12 09 53 AM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/dddbe833-91e8-4e4c-993b-c787f6d1a14d">
+
+![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/04bd52ba-083b-4337-8dd8-ad683d4833ce)
 
