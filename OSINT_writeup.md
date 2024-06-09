@@ -193,13 +193,25 @@ Reverse searching the image, I came across this official tweet by ` Villa Somali
 > 
 > b) What are the coordinates of where the camera was likely located in order to record this scene?
 
-Reverse searching the image, I found many posts with the same clip. Fortunately, one of the links titled ` Cutremur Chisinau 24.09.2016 `. Clicking on the link, I found that it is indeed the same clip. To get more confirmed, I searched for all earthquakes that happened in ` September 2016 `and found [List of earthquakes in 2016](https://en.wikipedia.org/wiki/List_of_earthquakes_in_2016#September) and there I found earthquakes that happened on ` 24th September ` and I tried to match the time zone as given in video and found the location was ` Romania ` and the magnitude of earthquake was ` 5.6 ` from ` Wikipedia ` page. 
+Reverse searching the image, I found many posts with the same clip. Fortunately, one of the links titled ` Cutremur Chisinau 24.09.2016 `. Clicking on the link, I found that it is indeed the same clip. To get more confirmed, I searched for all earthquakes that happened in ` September 2016 `and found [List of earthquakes in 2016](https://en.wikipedia.org/wiki/List_of_earthquakes_in_2016#September) and there I found earthquakes that happened on ` 23rd or 24th September ` and there were three on each date - Japan, Burundi and Romania on the 23rd and Philippines, Tonga and Fiji on the 24th. All occurrences had links to USGS which reports the time stamps in UTC+0. So, I searched for time at which earthquake happened in Romania on ` 23rd September 2016 ` in UTC time and got this. Also, I compared by getting UTC time of other earthquakes and only the time in the video matched with ` Romania `. 
+
+<img width="833" alt="Screenshot 2024-06-10 at 1 12 31 AM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/d69e0a6d-0724-4626-a8d7-1ba4b584f2c4">
+
+Searching more, I found that the city ` Chisinau ` was 224km away from the epicentre. So, the magnitude of earthquake would have been somewhere between ` 5.4 ` and ` 5.6 ` from ` Wikipedia ` page. 
 
 <img width="828" alt="Screenshot 2024-06-10 at 12 26 10 AM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/a63fd51d-cfc9-4388-9e53-4c5722d8ecf5">
 
-Then, for the coordinates of camera, I tried to match the buildings around the house with the building on which camera was placed and yahoo..got the coordinates of camera ` 47.017518, 28.852841 `.
+Then, for the coordinates of camera, I tried to match the buildings around the house with the building on which camera was placed. One of the building was ` Atrium Shopping Mall `, other one was ` Dimitrie Cantemir Boulevard. 14 ` and nearest one was ` Chișinău `. And, yahoo..got the coordinates of camera ` 47.017518, 28.852841 `.
 
 <img width="568" alt="Screenshot 2024-06-10 at 12 09 53 AM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/dddbe833-91e8-4e4c-993b-c787f6d1a14d">
 
 ![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/04bd52ba-083b-4337-8dd8-ad683d4833ce)
+
+## OSINT Exercise 26
+> The image below shows the contents of a zip file. Inside you will find a 31-second video recorded during a train ride, and four photos of undisclosed
+> locations. They were all taken by the same individual in February 2024. Despite having no useful metadata, they still contain enough information to track down > this person’s movements.
+>
+> Your task is to determine:
+>
+> a) At which train stations did the person board and alight?
 
