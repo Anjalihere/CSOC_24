@@ -1,4 +1,4 @@
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/be112b7c-64ca-4193-93ea-1298e452c254)![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/5da977b0-4dab-47f0-b241-2ae26f1f4fb6)# Challenge #2
+# Challenge #2
 ## Try Hack Me | Sakura Room
 ### INTRODUCTION
 Just type in "Let's Go!" 
@@ -170,7 +170,8 @@ Reverse searching the image on google, I got the name of the resort ` Oan Resort
 
 For the third part, we need some ` Google Earth ` in the game. Putting the coordinates on there and moving and moving till we get to the direction from which the camera took the photo and here we got ` Northwest `.
 
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/c4281659-2c38-4f2c-8382-7c59ad40d63a)
+![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/bf2ae893-905d-4eff-8843-c3e74ea70fba)
+
 
 
 ### OSINT Exercise 3
@@ -179,8 +180,8 @@ For the third part, we need some ` Google Earth ` in the game. Putting the coord
 
 Reverse searching the image, I came across this official tweet by ` Villa Somalia ` which stated the place as ` Presidential Complex in Ankara `. Although, the date of tweet was different from given in challenge but the location is same.
 
+![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/c4281659-2c38-4f2c-8382-7c59ad40d63a)
 
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/bf2ae893-905d-4eff-8843-c3e74ea70fba)
 
 ### OSINT Exercise 14
 > The video below was recorded during an earthquake.
