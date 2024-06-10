@@ -218,10 +218,30 @@ Then, for the coordinates of camera, I tried to match the buildings around the h
 ![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/04bd52ba-083b-4337-8dd8-ad683d4833ce)
 
 ## OSINT Exercise 26
-> The image below shows the contents of a zip file. Inside you will find a 31-second video recorded during a train ride, and four photos of undisclosed
+> The image below shows the contents of a zip file. Inside you will find a 31-second video recorded during a train > > ride, and four photos of undisclosed
 > locations. They were all taken by the same individual in February 2024. Despite having no useful metadata, they still contain enough information to track down > this person’s movements.
 >
 > Your task is to determine:
 >
 > a) At which train stations did the person board and alight?
 
+Reverse searching the building in the first image, I found that it was ` Chorsu mehmonxonasi ` translated to ` Chorsu Hotel ` in ` Tashkent`. On further search, I found the area in the image was of ` Chorsu bazaar `. 
+
+![IMG_2597](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/ec93d35e-e13d-4869-9f62-714004a2e847)
+
+Reverse searching second image, I easily found this beautiful sight of Tashkent place called ` Anhor Lokomotiv Park `.
+Now, reverse searching third image is not going to get easy. I searched for every element I could have, still got no hints. But guess what, when I searched for that little hiding in the back ` Rent A Car ` thing, that too with lots of scrolling on google maps, I found the area (lots of wandering though..) of which the image was ` Afrosiab street `.
+
+![IMG_2658](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/ae254d1b-8dcb-4b25-ae85-a027d6319f3f)
+
+<img width="914" alt="Screenshot 2024-06-10 at 2 56 55 AM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/7dc3a647-7c04-4902-9b9b-3d443267d5ba">
+
+<img width="1267" alt="Screenshot 2024-06-10 at 3 27 38 AM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/519763de-5f14-46d7-a123-fb81e6b0af7e">
+
+
+Then, I mapped these three location on ` google map ` and that was a no-brainer fourth station has to be ` Stantsiya Tashkent Pass Tsentr ` on looking for stations near ` Afrosiyab `. 
+
+<img width="1267" alt="Screenshot 2024-06-10 at 3 41 56 AM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/147d844a-30db-42d6-98ed-7e5e8d22485c">
+
+
+Now, coming 
