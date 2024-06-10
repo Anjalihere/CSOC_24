@@ -28,6 +28,7 @@ account. Going through the github repo of attacker, I found the repo ` PGP ` whi
 
 <img width="1027" alt="Screenshot 2024-06-07 at 1 51 41 AM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/2bbb6e82-279b-4978-9071-c20274b664cd">
 
+
 > What is the attacker's full real name?
 >
 > Aiko Abe
@@ -51,6 +52,7 @@ I found this cryptocurrency wallet in ` ETH ` repo and searching on google, I fo
 <img width="1270" alt="Screenshot 2024-06-06 at 9 36 46 PM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/12940729-ad4c-443d-9a4d-4307c5ef6587">
 
 
+
 > What is the attacker's cryptocurrency wallet address?
 >
 > 0xa102397dbeeBeFD8cD2F73A89122fCdB53abB6ef
@@ -59,6 +61,7 @@ Going through the ` commit history ` of ` mining script `, I found a string of l
 There we got the wallet address!
 
 <img width="1257" alt="Screenshot 2024-06-06 at 9 35 18 PM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/ae4d6946-7dc8-4795-86bf-d7d5d0cc7021">
+
 
 
 > What mining pool did the attacker receive payments from on January 23, 2021 UTC?
@@ -70,11 +73,13 @@ This was somehing which can't be found on. For this, I searched for some website
 <img width="1266" alt="Screenshot 2024-06-06 at 9 46 43 PM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/6fdf842f-967f-470a-8601-e09010ad9a5d">
 
 
+
 > What other cryptocurrency did the attacker exchange with using their cryptocurrency wallet?
 >
 > Tether
 
 Similarly, looking at the history of payments in above image, it can be seen that the other cryptocurrency attacker exchanged is of ` Tether `
+
 
 ### TAUNT 
 > What is the attacker's current Twitter handle?
@@ -100,6 +105,7 @@ screenshot given in hints for this task and there I got the url in search bar.
 
 
 
+
 > What is the BSSID for the attacker's Home WiFi?
 >
 > 84:af:ec:34:fc:f8
@@ -122,6 +128,7 @@ Finally, I noticed a white building in the back standing tall which was looking 
 
 Then, I searched for ` nearest airport to WASHINGTON MONUMENT ` and yess...I got it ` Ronald Reagan Washington National Airport `, Code: ` DCA `.
 
+
 > What airport did the attacker have their last layover in?
 >
 > HND
@@ -131,6 +138,7 @@ Reverse searching the image on google, I found it was ` Sakura Lounge, Japan Air
 ![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/8126ff73-cba7-44d2-acb5-18d599b88f3f)
 
 
+
 > What lake can be seen in the map shared by the attacker as they were on their final flight home?
 >
 > Lake Inawashiro
@@ -138,6 +146,8 @@ Reverse searching the image on google, I found it was ` Sakura Lounge, Japan Air
 Going through this map on ` Google Map ` I found this ` blue area ` which was actually a lake called ` Lake Inawashiro `.
 
 ![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/3cf63ec4-14e4-480a-98b0-a96de0ad8747)
+
+
 
 > What city does the attacker likely consider "home"?
 >
