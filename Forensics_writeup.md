@@ -59,7 +59,6 @@ It seemed like we should increment the height of image. So, I changed the ` heig
 
 <img width="681" alt="Screenshot 2024-06-09 at 5 25 55 PM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/8008814d-3c51-49a5-97ed-9543606a98e2">
 
-![image](https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/edc47335-b812-4d27-9ea5-0bebc99223b5)
 
 <img width="567" alt="Screenshot 2024-06-08 at 7 41 35 PM" src="https://github.com/Anjalihere/Week0_COPS-INFOSEC/assets/146505430/c3c6d9e3-f6f3-47c8-995b-58812d303b36">
 
@@ -110,13 +109,6 @@ All red?...maybe it has something to do with colours. I tried to edit it using t
 
 ` picoCTF{w1z4rdry} `
 
-## File types
-> This file was found among some files marked confidential but my pdf reader cannot read it, maybe yours can.
-> You can download the file from [here](https://artifacts.picoctf.net/c/82/Flag.pdf).
->
-> Hint_1: Remember that some file types can contain and nest other files
-
-When I 
 ## hideme
 > Every file gets a flag.
 >The SOC analyst saw one image been sent back and forth between two people. They decided to investigate and found out that there was more than what meets the eye [here](https://artifacts.picoctf.net/c/262/flag.png).
