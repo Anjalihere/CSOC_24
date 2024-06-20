@@ -1,3 +1,76 @@
+# Challenge_1
+
+`source.enc` is `base64` encoded, decoding it will give this python script:
+
+```python
+with open('flag.txt', 'r') as f:
+    flag = f.read()
+
+s = ''.join(format(ord(i), '02x') for i in flag)
+e = ""
+
+for i in range(0,len(s),4):
+    e += format(int(s[i:i+2],16)^int(s[i:i+4],16), '02x')
+
+with open('output.txt', 'w') as f:
+    f.write(e)
+```
+
+`output.txt` is the output file of above python script and it contains the value of `e`. When I tried to convert `e` from hex I got some messed up string looking like this: `CO2{H4y&b56_kn _'0B?B`. As the flag is of the form `CSOC23{}`, I transformed this string to `CSO23{H4y&b56_kn _'0B?}`. Then, I ran below python script which is performing `XOR` operation and giving complete flag :)
+
+```python
+flag = "CSOC23{H4 y&b 5 6 _kn _'0B?}"
+s = ''.join(format(ord(i), '02x') for i in flag)
+e = "43104f0c32017b48340179266203350636025f6b6e0a5f2730423f42"
+decrypted_bytes = []
+for i in range(0, len(e), 4):
+    # Extract the 2-byte segments from e and s
+    e_segment = int(e[i:i + 4], 16)
+    s_segment = int(s[i:i + 2], 16)
+
+    # XOR the segments to get the original s_segment
+    original_s_segment = e_segment ^ s_segment
+
+    # Convert the result back to bytes and append to decrypted_bytes
+    decrypted_bytes.append(original_s_segment.to_bytes(2))
+    # print(decrypted_bytes[-1])
+
+decrypted_bytes = b''.join(decrypted_bytes)
+decrypted_flag = decrypted_bytes.decode('utf-8')
+print("Decrypted Flag:", decrypted_flag)
+```
+
+
+` CSOC23{345y_ba5364_4nd_x0r?} `
+
+
+
+# Challenge_2
+
+Given: `01000011 01010011 01001111 01000011 00110010 33 7b 6a 75 35 37 5f ZDFmZjNyM243XzNuYw== 60 144 61 156 66 65 137 154 60 154 175`
+
+Here, the flag is encoded using different methods: `binary`, `hex`, `base64` and `octal`. Decoding each part subsequently will give the flag :)
+
+`Tip`: I was not able to remember what the last part is encoded in. So, I used `CyberChef` - `Magic` recipe to get which operation could help to make more sense of the string.
+
+```python
+import base64
+
+binary_string = "01000011 01010011 01001111 01000011 00110010"
+hex_string = "33 7b 6a 75 35 37 5f"
+base64_string = "ZDFmZjNyM243XzNuYw=="
+octal_string = [60, 144, 61, 156, 66, 65, 137, 154, 60, 154, 175]
+
+decoded_binary = ''.join(chr(int(b, 2)) for b in binary_string.split())
+decoded_hex = ''.join(chr(int(h, 16)) for h in hex_string.split())
+decoded_base64 = base64.b64decode(base64_string).decode('utf-8')
+decoded_octal = ''.join(chr(int(str(o), 8)) for o in octal_string)
+
+print(f"{decoded_binary}{decoded_hex}{decoded_base64}{decoded_octal}")
+```
+
+`CSOC23{ju57_d1ff3r3n7_3nc0d1n65_l0l}`
+
 <h1>CryptoHack Challenges</h1>
 
 <h2>INTRODUCTION</h2>
@@ -22,6 +95,7 @@ Connect to ` socket.cryptohack.org ` on port ` 11112 ` using ` nc socket.cryptoh
 <h4>ASCII</h4>
 
 ```python
+# Converting given integer array to their corresponding ASCII characters using 'chr()' function
 num = [99, 114, 121, 112, 116, 111, 123, 65, 83, 67, 73, 73, 95, 112, 114, 49, 110, 116, 52, 98, 108, 51, 125]
 for n in num:
     print(chr(n), end='')
@@ -32,6 +106,7 @@ for n in num:
 <h4>Hex</h4>
 
 ```python
+# Decoding given hex string into bytes using 'bytes.fromhex()' function
 num_str = "63727970746f7b596f755f77696c6c5f62655f776f726b696e675f776974685f6865785f737472696e67735f615f6c6f747d"
 print(bytes.fromhex(num_str))
 ```
@@ -41,6 +116,7 @@ print(bytes.fromhex(num_str))
 <h4>Base64</h4>
 
 ```python
+# Decoding given hex string into bytes and then encoding it into Base64 using 'base64.b64encode()' function
 import base64
 
 hex_str = "72bca9b68fc16ac7beeb8f849dca1d8a783e8acf9679bf9269f7bf"
@@ -54,6 +130,7 @@ print(enc_b64)
 <h4>Bytes and Big Integers</h4>
 
 ```python
+# Converting given long integer into a message using 'long_to_bytes()' function
 from Crypto.Util.number import*
 num = 11515195063862318899931685488813747395775516287289682636499965282714637259206269
 num = long_to_bytes(num)
@@ -67,6 +144,7 @@ print(num)
 <h4>XOR Starter</h4>
 
 ```python
+# XORing given string with the integer 13 using `xor()` function
 str = "label"
 for x in str:
   print(chr(ord(x)^13), end="")
@@ -77,11 +155,19 @@ for x in str:
 <h4>XOR Properties</h4>
 
 ```python
+# Using Commutative, Associative, Identity and Inverse properties of XOR to obtain the flag 
 from pwn import xor
 k1=bytes.fromhex('a6c8b6733c9b22de7bc0253266a3867df55acde8635e19c73313')
-k2_3=bytes.fromhex('c1545756687e7573db23aa1c3452a098b71a7fbf0fddddde5fc1')
-flag=bytes.fromhex('04ee9855208a2cd59091d04767ae47963170d1660df7f56f5faf')
-print(xor(k1,k2_3,flag)) 
+k2_3=bytes.fromhex('c1545756687e7573db23aa1c3452a098b71a7fbf0fddddde5fc1') # key2 ^ key3 = k2_3
+flag_1_3_2 =bytes.fromhex('04ee9855208a2cd59091d04767ae47963170d1660df7f56f5faf')
+
+# Given, flag ^ k1 ^ k3 ^ k2 = flag_1_3_2 & k3 ^ k2 = k2 ^ k3
+# say,   k1 ^ (k2 ^ k3)  = k1_23 => k1 ^ k2_3 = k1_23
+#        flag ^ k1_23 = flag_1_3_2
+#        flag ^ (k1_23 ^ k1_23) = flag_1_3_2 ^ k1_23  => flag ^ 0 = flag = flag_1_3_2 ^ k1_23 
+
+flag = xor(k1,k2_3,flag_1_3_2)
+print(flag) 
 ```
 
 `crypto{x0r_i5_ass0c1at1v3}`
@@ -89,6 +175,7 @@ print(xor(k1,k2_3,flag))
 <h4>Favourite Byte</h4>
 
 ```python
+# Looping through every single byte and XORing to see if 'crypto' contains in the decoded string
 from pwn import xor
 flagBytes = bytes.fromhex("73626960647f6b206821204f21254f7d694f7624662065622127234f726927756d")
 byte = 0x00
@@ -105,6 +192,9 @@ for _ in range(256):
 <h4>You either know, XOR you don't</h4>
 
 ```python
+# Don't know secret key but knowing the flag format and XORing it with given hex string gives some idea of the key
+# and now XORing with this key gives the flag
+
 from pwn import xor 
 flag = bytes.fromhex('0e0b213f26041e480b26217f27342e175d0e070a3c5b103e2526217f27342e175d0e077e263451150104') 
 print(xor(flag, 'crypto{'.encode() )) 
@@ -117,6 +207,8 @@ print(xor(flag, 'myXORkey'.encode()))
 <h3>MATHEMATICS</h3>
 
 <h4>Greatest Common Divisor</h4>
+
+Find `Euclid's Algorithm` to find `GCD` [here](https://en.wikipedia.org/wiki/Euclidean_algorithm).
 
 ```python
 def gcd(a,b):
@@ -133,6 +225,8 @@ print(gcd(a,b))
 #Output: `1512`
 
 <h4>Extended GCD</h4>
+
+Find `Extended Euclidean algorithm` [here](https://web.archive.org/web/20230511143526/http://www-math.ucdenver.edu/~wcherowi/courses/m5410/exeucalg.html).
 
 ```python
 def gcdExtended(a, b):
@@ -244,6 +338,8 @@ print(pow(101,17,22663))
 
 #### RSA Starter 2
 
+Use `pow(base, exponent, modulus)` built-in operator for next few RSA challenges.
+
 ```python
 p , q = 17, 23
 N = p*q
@@ -256,6 +352,8 @@ print(pow(message,e,N))
 
 #### RSA Starter 3
 
+Find about `Euler totient` [here](https://leimao.github.io/article/RSA-Algorithm/)
+
 ```python
 p = 857504083339712752489993810777
 q = 1029224947942998075080348647219
@@ -267,12 +365,14 @@ print(n_totient)
 
 #### RSA Starter 4
 
+Find `private key` or `modular multiplicative inverse` of the exponent `e` modulo the totient of `N` using `Extended Euclidean algorithm` discussed above.
+
 ```python
 p = 857504083339712752489993810777
 q = 1029224947942998075080348647219
 n_totient = (p-1)*(q-1)
 e = 65537
-d = pow(e,-1,n_totient)
+d = pow(e,-1,n_totient) # exponent will be -1 since inverse is to be calculated
 print(d)
 ```
       
@@ -280,13 +380,15 @@ print(d)
 
 #### RSA Starter 5
 
+Find more about `ciphertext`, `private key` and `public key` [here](https://leimao.github.io/article/RSA-Algorithm/))
+
 ```python
 p = 857504083339712752489993810777
 q = 1029224947942998075080348647219
 n_totient = (p-1)*(q-1)
 N = 882564595536224140639625987659416029426239230804614613279163
 e = 65537
-d = pow(e,-1,n_totient)
+d = pow(e,-1,n_totient) # As found in previous challenge
 c = 77578995801157823671636298847186723593814843845525223303932
 decrypted_message = pow(c,d,N)
 print(decrypted_message)
@@ -328,7 +430,8 @@ e = 1
 ct = 44981230718212183604274785925793145442655465025264554046028251311164494127485
 pt = pow(ct,e,n)
 pt_bytes = long_to_bytes(pt)
-Since e = 1, therefore ct = (m)^e mod n will become m = c (mod n)
+# Since e = 1, therefore ct = (m)^e mod n will become m = c (mod n)
+
 # Decode the bytes to a string
 pt_string = pt_bytes.decode('utf=8')
 print(pt_string)
