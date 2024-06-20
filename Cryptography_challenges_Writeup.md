@@ -16,7 +16,7 @@ with open('output.txt', 'w') as f:
     f.write(e)
 ```
 
-`output.txt` is the output file of above python script and it contains the value of `e`. When I tried to convert `e` from hex I got some messed up string looking like this: `CO2{H4y&b56_kn _'0B?B`. As the flag is of the form `CSOC23{}`, I transformed this string to `CSO23{H4y&b56_kn _'0B?}`. Then, I ran below python script which is performing `XOR` operation and giving complete flag :)
+`output.txt` is the output file of above python script and it contains the value of `e`. When I tried to convert `e` from hex I got some messed up string looking like this: `CO2{H4y&b56_kn _'0B?B`. As the flag is of the form `CSOC23{}`, I transformed this string to `CSO23{H4 y&b 5 6_kn _'0B?}`. Then, I ran below python script which is performing `XOR` operation and giving complete flag :)
 
 ```python
 flag = "CSOC23{H4 y&b 5 6 _kn _'0B?}"
