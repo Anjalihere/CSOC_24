@@ -259,7 +259,7 @@ The values at data_40203c and data_402044 must match in terms of their result fr
 ###### Final Check Comparisons:
 
 * The `R13` value must be 0x42e (1070)
-* `R1`2 (which is 4) incremented by 11 must be equal to `R15` (which is also 4), meaning `4 + 11 = 15` and `R15 = 15`.
+* `R12` (which is 4) incremented by 11 must be equal to `R15` (which is also 4), meaning `4 + 11 = 15` and `R15 = 15`.
 
 Here is the keygen script:
 
