@@ -20,14 +20,9 @@ The first vulnerability I introduced is of ` Path Traversal` . There is a hint i
 
 <img width="894" alt="Screenshot 2024-07-15 at 4 07 55 PM" src="https://github.com/user-attachments/assets/7d8ecf04-1661-4f55-adb5-a7f65b7a818a">
 
-
-
-<img width="358" alt="Screenshot 2024-07-15 at 4 08 39 PM" src="https://github.com/user-attachments/assets/546b0c59-3045-4636-aa67-14c75631fa48">
-
-
-
 <img width="623" alt="Screenshot 2024-07-15 at 4 08 13 PM" src="https://github.com/user-attachments/assets/3ef46aa0-626a-4423-9bcb-bd42e5cc15c6">
 
+<img width="358" alt="Screenshot 2024-07-15 at 4 08 39 PM" src="https://github.com/user-attachments/assets/546b0c59-3045-4636-aa67-14c75631fa48">
 
 ## Authentication Bypass:
 
