@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+        table {
+            border-collapse: collapse;
+            width: 95%; /* Adjusted width for a wider table */
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .button-container {
+            text-align: center;
+            margin: 40px auto 20px; /* Add space after the table */
+        }
+        .fingerprint-btn {
+            padding: 10px 20px;
+            background-color: #FF5733; /* Changed color to orange */
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Search Results</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Real Name</th>
+                <th>Address</th>
+                <th>Training Level</th>
+                <th>Skills</th>
+                <th>Crimes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{{ result.name }}</td>
+                <td>{{ result.address }}</td>
+                <td>{{ result.level }}</td>
+                <td>{{ result.skills }}</td>
+                <td>{{ result.crimes }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+       {% if show_fingerprint_button %}
+    <div class="button-container">
+        <a href="/identity" class="fingerprint-btn">View Fingerprint</a>
+    </div>
+    {% endif %}
+</body>
+</html>

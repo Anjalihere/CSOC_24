@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='database.css') }}">
+</head>
+<body>
+    <div class="welcome-section">
+        <div class="welcome-text">Welcome, Admin!</div>
+        <a href="#" class="logout-btn">Logout</a>
+    </div>
+    <h2 style="text-align: center;">Search for minions: </h2>
+    <div class="search-bar">
+        <form action="/search" method="GET">
+            <input type="text" name="query" placeholder="Search by Crimes..">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    
+
+    <table>
+        <thead>
+            <tr>
+                <th>Real Name</th>
+                <th>Address</th>
+                <th>Training Level</th>
+                <th>Skills</th>
+                <th>Crimes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Kim Jong-suk</td>
+                <td>70-5, Yanggeun ri 7, Yangpyeong-eup, Gyeonggi-do</td>
+                <td>Pro</td>
+                <td>Fighting, Karate</td>
+                <td>Theft, Assault</td>
+            </tr>
+            <tr>
+                <td>Park Ji-hoon</td>
+                <td>122-1, Dunsan-dong, Daejeon</td>
+                <td>Midway</td>
+                <td>Boxing, Stealth</td>
+                <td>Burglary, Illegal Hacking</td>
+            </tr>
+            <tr>
+                <td>Choi Eun-ha</td>
+                <td>68-8, Injeuidae, Gaegeum 2(i)-dong, Jin-gu, Busan</td>
+                <td>Rookie</td>
+                <td>Agility, Lockpicking</td>
+                <td>Fraud, Forgery</td>
+            </tr>
+            <tr>
+                <td>Lee Min-woo</td>
+                <td>260-1, Songjeongri, Jeondong-myeon, Chungcheongnam-do</td>
+                <td>Pro</td>
+                <td>Martial Arts, Weaponry</td>
+                <td>Murder, Kidnapping</td>
+            </tr>
+            <tr>
+                <td>Kang Soo-jin</td>
+                <td>307-1, Geunhwabeullubirapateu, Seokhyeon-dong, Jeollanam-do</td>
+                <td>Midway</td>
+                <td>Survival Skills, Tracking</td>
+                <td>Drug Trafficking, Extortion</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
