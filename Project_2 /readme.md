@@ -31,13 +31,15 @@ The first vulnerability I introduced is of ` Path Traversal` . There is a hint i
 
 ## Authentication Bypass:
 
-Getting to the login page, some  `message` is displayed. We are asked `email`, `username` and `password` which is pointing towards some vulnerability related to `Authentication Bypass`. Observing carefully, we can see some `morse code` (a hint). Decode it and it says there is a `logical flaw` and `emails are checked only` . 
+Getting to the login page, some  `message` is displayed. We are asked `email`, `username` and `password` which is pointing towards some vulnerability related to `Authentication Bypass`. Observing carefully, we can see some `morse code` (a hint). Decode it and it says there is a `logical flaw` and `emails are checked only`.
 
 <img width="690" alt="Screenshot 2024-07-15 at 9 35 11 PM" src="https://github.com/user-attachments/assets/fb602712-8909-4758-aba9-cc6753b85f10">
 
 
-<img width="740" alt="Screenshot 2024-07-15 at 4 42 04 PM" src="https://github.com/user-attachments/assets/774f80a3-0ff5-4483-ba27-43b21facaa30">
+Decode it and it says there is a `logical flaw` and `emails are checked only`.
 
+
+<img width="740" alt="Screenshot 2024-07-15 at 4 42 04 PM" src="https://github.com/user-attachments/assets/774f80a3-0ff5-4483-ba27-43b21facaa30">
 
 
 Since admin access is needed in such cases. Let's put `admin@moebius.com`...Oh no! this isn't the one. Remember the message says **the CEO of company is called `b0ss`**. So, we need `b0ss` access. Just put email as `b0ss@moebius.com` and username or password can be anything. There you go!
@@ -59,9 +61,11 @@ Bingo! You get the culprit details but we also needed `fingerprint` of the culpr
 
 ## Cookies:
 
+This is a `Cookies Manupulation` challenge. 
+
 <img width="560" alt="Screenshot 2024-07-15 at 4 11 14 PM" src="https://github.com/user-attachments/assets/b6130ce5-c079-4ea5-80c5-bac07c55075c">
 
-This is a `Cookies Manupulation` challenge. The hints on the webpage clearly points towards `cookies`. 
+The hints on the webpage clearly points towards `cookies`. 
 Checking cookies, it contained the name `b0ss` and key is some weird string. 
 
 <img width="504" alt="Screenshot 2024-07-15 at 4 12 41 PM" src="https://github.com/user-attachments/assets/786d07ce-5c48-4dcb-b87a-c9551cb256ca">
