@@ -1,7 +1,7 @@
 # Web of Vulnerabilities
 
 
-I made this website with full of vulnerabilities and crafted it in the form of a storyline or game such that exploiting one vulnerability will lead to another one and so on.  
+I made this website with full of vulnerabilities and crafted it in the form of a storyline such that exploiting one vulnerability will lead to another one and so on.  
 I have given hints for next level in order to make it a little easier and fun although real-world challenge don't involve such hints.
 
 ## Getting Started
